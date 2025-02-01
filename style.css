@@ -94,8 +94,39 @@ body {
 }
 
 
+/* Footer */
+
+.footer ul {
+    list-style-type: none;
+    background-color: whitesmoke;
+    padding: 0px;
+    margin: -8px;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
+.footer li {
+    display: block;
+}
+
+
+.footer a {
+    color: rgb(17, 3, 3);
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+    text-align: center;
+}
+
+.sponsors {
+    flex: 1 0 17rem;
+    padding: .7rem;
+    border-bottom: .1rem solid white;
+    position: relative;
+}
 
 
 
