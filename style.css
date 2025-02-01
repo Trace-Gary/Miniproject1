@@ -144,6 +144,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 150px
 }
 
 .dropdown button{
@@ -187,7 +188,9 @@ body {
 
 
 
-
+.container {
+    margin-top: 200px;
+}
 
 
 .card-container {
@@ -200,3 +203,90 @@ body {
     margin-top: 10px;
 }
 
+
+
+
+
+
+
+  
+/* contact us page */ 
+  
+.contact-section, .message-section {
+    padding: 20px;
+    text-align: center;
+}
+  
+.contact-section h2, .message-section h2 {
+    color: hsl(128, 100%, 20%);
+}
+  
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+  
+.contact-card {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+  
+.contact-card h3 {
+    color: hsl(128, 100%, 20%);
+}
+  
+.contact-card a {
+    color: hsl(128, 100%, 20%);
+    text-decoration: none;
+}
+  
+.message-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.message-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.submit-button {
+    background-color: hsl(128, 100%, 20%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.submit-button:hover {
+    background-color: hsla(106, 78%, 41%, 0.973);
+}
+/* end of contact css*/
