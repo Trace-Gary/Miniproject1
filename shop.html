@@ -45,8 +45,7 @@
     </nav>
 
 
-    <!-- Sorting buttons -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+
 
     
 
@@ -60,33 +59,16 @@
 
 
 
-<!--work on sorting-->
-    <div class="filters">
-        <select name="category_filter" id="category_filter" onchange="filterProducts(event)">
-            <option>All Products</option>
+
+
+    <div class="filter-container">
+        <select id="categoryFilter" class="form-select">
+            <option value="all">All</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Gloves">Gloves</option>
         </select>
-
-        <div id="sort">
-            <label>Sort By:
-                <select name="sort_order" id="sort_order" onchange="sortProducts(event)">
-                    <option value="id">Default ordering</option>
-                    <option value="price_lohi">Price (low to high)</option>
-                    <option value="price_hilo">Price (high to low)</option>
-                    <option value="title_az">Title (A to Z)</option>
-                    <option value="title_za">Title (Z to A)</option>
-                </select>  
-            </label>
-        </div>        
-
-        <div id="search">
-            <input name="searchText" id="searchText"> <button onclick="searchProducts()">Search</button>
-        </div>
     </div>
-    <div id="product-list" class="row g-5 py-5"></div>
-
-
-
-
 
 
  
@@ -102,28 +84,30 @@
 
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-            <div class="col" data-item="jerseys">
-                <div class="card" style="width: 18rem;">
+            <div class="col">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/arsenal red kit.webp" alt="Arsenal red jersey">
                     <div class="card-body">
                         <h5 class="card-title">Arsenal</h5>
                         <p class="card-text">Home Jersey</p>
+                        <span class="price">$50</span>
                         <a href="#" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col">   
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/arsenal blue kit.webp" alt="Arsenal blue jersey">
                     <div class="card-body">
                         <h5 class="card-title">Arsenal</h5>
                         <p class="card-text">Special competitions Jersey.</p>
+                        <span class="price">$50</span>
                         <a href="#" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/arsenal black kit.webp" alt="Arsenal black jersey">
                     <div class="card-body">
                         <h5 class="card-title">Arsenal</h5>
@@ -132,6 +116,69 @@
                     </div>
                 </div>
             </div> 
+
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Shorts White.png" alt="Arsenal white shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Home Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Shorts Light Blue.png" alt="Arsenal light blue shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Special Competitions Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Shorts Blue.png" alt="Arsenal blue shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Away Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Gloves Red.png" alt="Arsenal red gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Red Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Gloves Blue.png" alt="Arsenal blue gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Blue Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Arsenal Gloves Black.png" alt="Arsenal black gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Arsenal</h5>
+                        <p class="card-text">Black Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -140,7 +187,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/chelsea blue kit.avif" alt="Chelsea blue jersey">
                     <div class="card-body">
                         <h5 class="card-title">Chelsea</h5>
@@ -150,7 +197,7 @@
                 </div>
             </div>
             <div class="col">   
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/chelsea black kit.avif" alt="Chelsea black jersey">
                     <div class="card-body">
                         <h5 class="card-title">Chelsea</h5>
@@ -160,11 +207,74 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/chelsea white kit.avif" alt="Chelsea white jersey">
                     <div class="card-body">
                         <h5 class="card-title">Chelsea</h5>
                         <p class="card-text">Away Jersey</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+
+
+
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Shorts Blue.png" alt="Chelsea blue shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Home Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Shorts Orange.png" alt="Chelsea orange shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Special competitions Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Shorts White.png" alt="Chelsea white shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Away shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Gloves Blue.png" alt="Chelsea Blue Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Blue Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Gloves Black.png" alt="Chelsea Black Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Black Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Chelsea Gloves Pink.png" alt="Chelsea Pink Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Chelsea</h5>
+                        <p class="card-text">Pink Gloves</p>
                         <a href="#" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
@@ -178,7 +288,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/liverpool red kit.jpg" alt="Liverpool red jersey">
                     <div class="card-body">
                         <h5 class="card-title">Liverpool</h5>
@@ -188,7 +298,7 @@
                 </div>
             </div>
             <div class="col">   
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/liverpool black kit.jpg" alt="Liverpool black jersey">
                     <div class="card-body">
                         <h5 class="card-title">Liverpool</h5>
@@ -198,11 +308,74 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/liverpool white kit.jpg" alt="Liverpool white jersey">
                     <div class="card-body">
                         <h5 class="card-title">Liverpool</h5>
                         <p class="card-text">Away Jersey</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+
+
+
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Shorts Red.png" alt="Liverpool Red Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Home Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Shorts Black.png" alt="Liverpool Black Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Away Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Shorts White.png" alt="Liverpool White Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Special Competitions Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Gloves Grey.png" alt="Liverpool Grey Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Grey Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Gloves Black.png" alt="Liverpool Black Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Black Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Liverpool Gloves Red.png" alt="Liverpool Red Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Liverpool</h5>
+                        <p class="card-text">Red Gloves</p>
                         <a href="#" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
@@ -218,7 +391,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/man city blue kit.webp" alt="Manchester City red jersey">
                     <div class="card-body">
                         <h5 class="card-title">Manchester City</h5>
@@ -228,7 +401,7 @@
                 </div>
             </div>
             <div class="col">   
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/man city maroon kit.webp" alt="Manchester City blue jersey">
                     <div class="card-body">
                         <h5 class="card-title">Manchester City</h5>
@@ -238,7 +411,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/man city away kit.webp" alt="Manchester City black and yellow jersey">
                     <div class="card-body">
                         <h5 class="card-title">Manchester City</h5>
@@ -247,6 +420,64 @@
                     </div>
                 </div>
             </div> 
+
+
+
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Shorts Blue.png" alt="Manchester City Blue Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Home Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Shorts Burgundy.png" alt="Manchester City Burgundy Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Away Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Shorts White.png" alt="Manchester City White Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Special Competitions Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Gloves Light blue.png" alt="Manchester City Light Blue Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Light Blue Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Gloves Black.png" alt="Manchester City Black Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Black Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Man City Grey Gloves.png" alt="Manchester City Grey Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Manchester City</h5>
+                        <p class="card-text">Grey Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -257,7 +488,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/tottenham white kit.jpg" alt="Tottenham red Jersey">
                     <div class="card-body">
                         <h5 class="card-title">Tottenham</h5>
@@ -267,7 +498,7 @@
                 </div>
             </div>
             <div class="col">   
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/tottenham blue kit.jpg" alt="Tottenham blue Jersey">
                     <div class="card-body">
                         <h5 class="card-title">Tottenham</h5>
@@ -277,7 +508,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" data-category="Shirts" style="width: 18rem;">
                     <img class="card-img-top" src="./images/tottenham green kit.webp" alt="Tottenham black Jersey">
                     <div class="card-body">
                         <h5 class="card-title">Tottenham</h5>
@@ -286,41 +517,70 @@
                     </div>
                 </div>
             </div> 
+
+
+
+
+            <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Shorts Dark Blue.png" alt="Tottenham Shorts Dark Blue">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">Home Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Shorts Light Blue.png" alt="Tottenham Shorts Light Blue">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">Away Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> <div class="col">
+                <div class="card" data-category="Shorts" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Shorts White .png" alt="Tottenham Shorts White">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">Special Competitions Shorts</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Gloves Blue.png" alt="Tottenham Blue Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">Dark Blue Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Gloves Light Blue.png" alt="Tottenham Aqua Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">Aqua Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> <div class="col">
+                <div class="card" data-category="Gloves" style="width: 18rem;">
+                    <img class="card-img-top" src="./images/Tottenham Gloves White.png" alt="Tottenham White Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Tottenham</h5>
+                        <p class="card-text">White Gloves</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div> 
         </div>
-
-
-
-        <div id="main" style="width: 600px;height:400px;"></div>
-<script type="text/javascript">
-// Initialize the echarts instance based on the prepared dom
-let myChart = echarts.init(document.getElementById('main'));
-// Specify the configuration items and data for the chart
-let option = {
-title: {
-text: 'ECharts Getting Started Example'
-},
-tooltip: {},
-legend: {
-data: ['sales']
-},
-xAxis: {
-data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
-},
-yAxis: {},
-series: [
-{
-name: 'sales',
-type: 'bar',
-data: [5, 20, 36, 10, 10, 20]
-}
-]
-};
-// Display the chart using the above configuration items and data
-myChart.setOption(option);
-</script>
     </div>
 
-        
+
+    
 
     <footer class="footer">
         <ul>
@@ -337,6 +597,7 @@ myChart.setOption(option);
             <li><a href="https://rezzil.com/">Rezzil</a></li>
         </ul>
     </footer>
+    
 
         
 

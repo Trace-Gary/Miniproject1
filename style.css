@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
 }
 
@@ -61,7 +61,7 @@ body {
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
-
+ */
 
 
 
@@ -164,13 +164,24 @@ body {
 
 
 
+
+/* Log in box */
+
+.signup-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 75vh; /* Full viewport height */
+}
+
+
 .signup-section {
     background-color: rgba(29, 47, 212, 0.336);
     padding: 20px;
-    margin: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 95%;
+    max-width: 500px; /* Prevents it from being too wide */
+    width: 90%; /* Makes it responsive */
 }
 
 .signup-section h2 {
@@ -214,17 +225,98 @@ body {
 
 
 
+/* Table Section Styling */
+.table-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.table-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables scrolling on small screens */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Table Styling */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: hsl(210, 50%, 40%);
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+tr:hover {
+    background-color: hsl(210, 50%, 60%);
+    color: white;
+    transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+.hidden {
+    display: none
+}
 
 
 
 
 
+/* Sorting Buttons */
+.filter-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-select {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 50px; /* Adds space from the top */
+    max-width: 500px;
+    align-items: center;
+}
 
 
-
-
-
-
+/* Card styling */
 
 .sorting-container{
     background-color: rgb(206, 54, 54);
@@ -287,7 +379,14 @@ body {
     margin-top: 10px;
 }
 
-
+.price {
+    position: absolute;
+    bottom: 15px;  /* Moves it slightly higher */
+    right: 30px;   /* Moves it more to the left */
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745; /* Green color for price */
+}
 
 
 
