@@ -225,79 +225,58 @@
 
 
 
-/* Table Section Styling */
-.table-section {
+/* Table Styling */
+
+.theading {
     text-align: center;
-    padding: 40px;
-    background-color: #f4f4f4;
 }
 
-.table-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Table Container */
 .table-container {
-    width: 100%;
-    overflow-x: auto; /* Enables scrolling on small screens */
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-
-
-/* Table Styling */
 table {
-    width: 90%;
+    width: 80%;
     border-collapse: collapse;
-    margin: 20px auto;
-    font-size: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
     padding: 12px;
     border: 1px solid #ddd;
+    text-align: center;
 }
 
 th {
-    background-color: hsl(210, 50%, 40%);
+    background-color: #0073e6;
     color: white;
     text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternating row colors */
+    background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: hsl(210, 50%, 60%);
-    color: white;
-    transition: 0.3s;
+    background-color: #f1f1f1;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Responsive Table */
+@media screen and (max-width: 768px) {
     table {
-        width: 100%;
+        width: 95%;
     }
 
     th, td {
         padding: 8px;
-        font-size: 0.9rem;
     }
 }
-
-.hidden {
-    display: none
-}
-
-
-
 
 
 /* Sorting Buttons */
@@ -518,3 +497,4 @@ tr:hover {
     background-color: hsla(106, 78%, 41%, 0.973);
 }
 /* end of contact css*/
+
