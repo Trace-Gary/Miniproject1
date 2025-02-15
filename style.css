@@ -176,7 +176,7 @@
 
 
 .signup-section {
-    background-color: rgba(29, 47, 212, 0.336);
+    background-color: hsla(128, 82%, 43%, 0.493);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -357,6 +357,13 @@ tr:hover {
     margin-bottom: 100px;
     margin-top: 10px;
 }
+
+
+.card:hover {
+    transform: scale(1.1); /* Enlarges the card */
+  }
+
+
 
 .price {
     position: absolute;

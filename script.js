@@ -16,13 +16,6 @@ function validatePassword() {
 
 
 
-
-
-
-
-
-
-
 const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 const apiKey = "81b7cb1ff32c4a21a1299de3202fa40a";
 const url = "https://api.football-data.org/v4/competitions/PL/standings";
@@ -73,8 +66,13 @@ async function fetchStandings() {
   }
 }
 
+
 // Fetch data when the page loads
 document.addEventListener("DOMContentLoaded", fetchStandings);
+
+
+
+
 
 
 
